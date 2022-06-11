@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="miU-pW-nle">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kişi Seçiniz-->
+        <scene sceneID="Fwt-0r-sFH">
+            <objects>
+                <tableViewController id="IcW-Zv-Ejr" customClass="ViewController" customModule="QR_Code_To_SMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ww5-oj-jqd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckListItem" textLabel="Gk5-45-czh" detailTextLabel="4oG-Jd-0fI" style="IBUITableViewCellStyleSubtitle" id="tLi-Uo-kir">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="58.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tLi-Uo-kir" id="T5I-g8-SWx">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="58.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gk5-45-czh">
+                                            <rect key="frame" x="19.999999999999996" y="8.3333333333333339" width="34.666666666666664" height="19.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4oG-Jd-0fI">
+                                            <rect key="frame" x="19.999999999999996" y="30.333333333333336" width="55.666666666666664" height="19.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IcW-Zv-Ejr" id="n7A-26-NcS"/>
+                            <outlet property="delegate" destination="IcW-Zv-Ejr" id="0ON-Wy-bPc"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Kişi Seçiniz" id="CBl-xh-58h">
+                        <barButtonItem key="rightBarButtonItem" title="İleri" id="tfy-3E-vDV">
+                            <connections>
+                                <segue destination="KnF-eV-VZd" kind="show" id="ejT-ED-mcZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="IleriButon" destination="tfy-3E-vDV" id="7iO-Iy-Fe7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rEf-Il-xQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782.608695652174" y="62.946428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hGE-2u-h5E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="miU-pW-nle" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UVb-ft-43y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IcW-Zv-Ejr" kind="relationship" relationship="rootViewController" id="Ozq-e2-7ao"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQ1-dH-zu1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872.46376811594212" y="62.946428571428569"/>
+        </scene>
+        <!--QR Kod Okutunuz-->
+        <scene sceneID="bDk-IJ-0sU">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeView" id="KnF-eV-VZd" customClass="QRCodeViewController" customModule="QR_Code_To_SMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gZQ-94-nfE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfH-Nk-tln" customClass="QRCodeReaderView" customModule="QRCodeReader">
+                                <rect key="frame" x="32" y="64" width="350" height="350"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="4du-id-L2O"/>
+                                    <constraint firstAttribute="height" constant="350" id="iBD-8k-esi"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pB6-ES-Epv">
+                                <rect key="frame" x="122.33333333333333" y="434" width="169.33333333333337" height="41.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="QR Code Tara"/>
+                                <buttonConfiguration key="configuration" style="filled" title="QR Code Tara">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="QRCodeTara" destination="KnF-eV-VZd" eventType="touchUpInside" id="Ige-KD-5WC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Okunan Metin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ura-1f-mLA">
+                                <rect key="frame" x="30" y="549.66666666666663" width="354" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" systemColor="systemMintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwX-Up-paE">
+                                <rect key="frame" x="180" y="505.66666666666674" width="54" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hSO-Tr-mFb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pB6-ES-Epv" firstAttribute="centerX" secondItem="gZQ-94-nfE" secondAttribute="centerX" id="8ex-17-mJ8"/>
+                            <constraint firstItem="rfH-Nk-tln" firstAttribute="top" secondItem="hSO-Tr-mFb" secondAttribute="top" constant="20" id="U0L-PJ-Vs9"/>
+                            <constraint firstItem="HwX-Up-paE" firstAttribute="centerX" secondItem="gZQ-94-nfE" secondAttribute="centerX" id="U1I-z2-3lA"/>
+                            <constraint firstItem="pB6-ES-Epv" firstAttribute="top" secondItem="rfH-Nk-tln" secondAttribute="bottom" constant="20" id="dwx-6q-Lem"/>
+                            <constraint firstItem="rfH-Nk-tln" firstAttribute="centerX" secondItem="gZQ-94-nfE" secondAttribute="centerX" id="ezp-AM-Bdf"/>
+                            <constraint firstItem="HwX-Up-paE" firstAttribute="top" secondItem="pB6-ES-Epv" secondAttribute="bottom" constant="30" id="gPp-Hg-7w3"/>
+                            <constraint firstItem="hSO-Tr-mFb" firstAttribute="trailing" secondItem="ura-1f-mLA" secondAttribute="trailing" constant="30" id="p7t-1A-Bd2"/>
+                            <constraint firstItem="ura-1f-mLA" firstAttribute="leading" secondItem="hSO-Tr-mFb" secondAttribute="leading" constant="30" id="s2N-kk-5uN"/>
+                            <constraint firstItem="ura-1f-mLA" firstAttribute="top" secondItem="HwX-Up-paE" secondAttribute="bottom" constant="20" id="xgU-4v-YUR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="QR Kod Okutunuz" id="tBs-D3-nqn">
+                        <barButtonItem key="rightBarButtonItem" title="Sms Gönder" id="16E-XQ-C0S">
+                            <connections>
+                                <action selector="SmsGonder" destination="KnF-eV-VZd" id="u3y-au-ytl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="QrMetinLabel" destination="ura-1f-mLA" id="BW5-4V-biw"/>
+                        <outlet property="SmsButon" destination="16E-XQ-C0S" id="klI-BW-cpE"/>
+                        <outlet property="previewView" destination="rfH-Nk-tln" id="43a-3E-7SA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zl2-7s-W1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820.289855072464" y="61.956521739130437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

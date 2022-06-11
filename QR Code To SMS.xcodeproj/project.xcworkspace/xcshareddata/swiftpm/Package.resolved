@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "qrcodereader.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yannickl/QRCodeReader.swift",
+      "state" : {
+        "branch" : "master",
+        "revision" : "f65f9a7dbbb17e31cf45cf453cdc98691dc80607"
+      }
+    }
+  ],
+  "version" : 2
+}
